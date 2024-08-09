@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite parallel="tests" name="Failed suite [Suite]" guice-stage="DEVELOPMENT" verbose="0">
+  <listeners>
+    <listener class-name="TestComponents.Listeners"/>
+  </listeners>
+  <test thread-count="5" parallel="tests" name="Verify error message(failed)" verbose="0">
+    <classes>
+      <class name="Tests.VerifyErrorMessage">
+        <methods>
+          <include name="closeApplication"/>
+          <include name="LaunchApplication"/>
+          <include name="submitOrder"/>
+          <include name="Config"/>
+        </methods>
+      </class> <!-- Tests.VerifyErrorMessage -->
+    </classes>
+  </test> <!-- Verify error message(failed) -->
+  <test thread-count="5" parallel="tests" name="Submit order test(failed)" verbose="0">
+    <classes>
+      <class name="Tests.SubmitOrderTest">
+        <methods>
+          <include name="closeApplication"/>
+          <include name="OrderHistroryTest"/>
+          <include name="LaunchApplication"/>
+          <include name="submitOrder"/>
+          <include name="Config"/>
+        </methods>
+      </class> <!-- Tests.SubmitOrderTest -->
+    </classes>
+  </test> <!-- Submit order test(failed) -->
+</suite> <!-- Failed suite [Suite] -->
